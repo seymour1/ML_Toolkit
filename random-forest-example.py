@@ -5,10 +5,10 @@ from sklearn.datasets import load_digits
 import numpy as np
 
 mnist = load_digits()
-clf = RandomForestClassifier(n_estimators=10)
+clf = RandomForestClassifier(n_estimators=100)
 scores = cross_val_score(clf, mnist.data, mnist.target)
 print(scores.mean())
 
-clf = ExtraTreesClassifier(n_estimators=10)
+clf = ExtraTreesClassifier(n_estimators=100)
 scores = cross_val_score(clf, mnist.data, mnist.target)
 print(scores.mean())
